@@ -126,3 +126,36 @@ accounts = [account, savings, current]
 for acc in accounts:
     acc.statement()
     print()
+
+
+class Account:
+    def __init__(self ,owner, account_number, balance=0,):
+        self.owner=owner
+        self.account_number=account_number
+        self.balance=balance
+
+#Read_only_proprty
+@property
+def balance(self):
+    return self._balance
+
+def deposit(self,amount):
+    if amount < 0:
+     raise ValueError ("amount can not be negative")
+    balance += amount
+
+numbers = [5,2,5,2,2]
+
+for numbers = 5
+  print ("xxxxx")/n
+    for numbers = 2
+     print("xx")
+
+def merge_sort(items):
+if len(items) <= 1:       # base case
+return items
+mid = len(items) // 2
+left = merge_sort(items[:mid])    
+# recurse
+right = merge_sort(items[mid:])   
+return merge(left, right)  
