@@ -1,0 +1,5 @@
+Abebe,300
+Sara,100
+Abebe,500
+John,200
+Sara,50
