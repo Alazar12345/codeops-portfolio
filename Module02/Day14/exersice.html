@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 14 Exercises - Flexbox & Grid</title>
+
+<style>
+
+/* =====================================
+   GLOBAL STYLES
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    line-height:1.6;
+}
+
+section{
+    background:white;
+    margin:30px;
+    padding:20px;
+    border-radius:10px;
+}
+
+h2{
+    margin-bottom:20px;
+    color:#0B7A75;
+}
+
+/* =====================================
+   EXERCISE 1
+   FLEXBOX NAVBAR
+===================================== */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#0B7A75;
+    color:white;
+    padding:15px 25px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+}
+
+.nav-links button{
+    padding:8px 16px;
+}
+
+/* =====================================
+   EXERCISE 2
+   FLEX CARDS
+===================================== */
+
+.flex-cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.flex-card{
+    flex:1;
+    min-width:180px;
+
+    background:#ddd;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:8px;
+}
+
+/* =====================================
+   EXERCISE 3
+   GRID PHOTO GALLERY
+===================================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(200px,1fr));
+
+    gap:20px;
+}
+
+.photo{
+
+    height:180px;
+
+    background:#bbbbbb;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+}
+
+/* =====================================
+   EXERCISE 4
+   GRID TEMPLATE AREAS
+===================================== */
+
+.layout{
+
+    display:grid;
+
+    grid-template-columns:220px 1fr;
+
+    grid-template-areas:
+
+    "header header"
+
+    "sidebar main"
+
+    "footer footer";
+
+    gap:10px;
+}
+
+.layout header{
+
+    grid-area:header;
+
+    background:#0B7A75;
+
+    color:white;
+
+    padding:20px;
+}
+
+.layout aside{
+
+    grid-area:sidebar;
+
+    background:#dddddd;
+
+    padding:20px;
+}
+
+.layout main{
+
+    grid-area:main;
+
+    background:#eeeeee;
+
+    padding:20px;
+}
+
+.layout footer{
+
+    grid-area:footer;
+
+    background:#333;
+
+    color:white;
+
+    padding:20px;
+}
+
+/* =====================================
+   EXERCISE 5
+   PRODUCT CARD
+===================================== */
+
+.product-card{
+
+    position:relative;
+
+    width:250px;
+
+    background:white;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    padding:20px;
+}
+
+.badge{
+
+    position:absolute;
+
+    top:10px;
+
+    right:10px;
+
+    width:70px;
+
+    height:70px;
+
+    background:red;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+/* =====================================
+   MEDIA QUERY
+===================================== */
+
+@media(max-width:700px){
+
+.layout{
+
+    grid-template-columns:1fr;
+
+    grid-template-areas:
+
+    "header"
+
+    "sidebar"
+
+    "main"
+
+    "footer";
+}
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================
+     EXERCISE 1
+     FLEXBOX NAVBAR
+===================================== -->
+
+<section>
+
+<h2>Exercise 1 - Flexbox Navbar</h2>
+
+<nav class="navbar">
+
+<div class="logo">
+Habesha Shop
+</div>
+
+<div class="nav-links">
+
+<a href="#">Home</a>
+
+<a href="#">Products</a>
+
+<a href="#">About</a>
+
+<button>Contact</button>
+
+</div>
+
+</nav>
+
+</section>
+
+<!-- =====================================
+     EXERCISE 2
+     FLEX CARDS
+===================================== -->
+
+<section>
+
+<h2>Exercise 2 - Flex Cards</h2>
+
+<div class="flex-cards">
+
+<div class="flex-card">Card 1</div>
+
+<div class="flex-card">Card 2</div>
+
+<div class="flex-card">Card 3</div>
+
+<div class="flex-card">Card 4</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+     EXERCISE 3
+     GRID PHOTO GALLERY
+===================================== -->
+
+<section>
+
+<h2>Exercise 3 - Responsive Grid Gallery</h2>
+
+<div class="gallery">
+
+<div class="photo">Photo 1</div>
+
+<div class="photo">Photo 2</div>
+
+<div class="photo">Photo 3</div>
+
+<div class="photo">Photo 4</div>
+
+<div class="photo">Photo 5</div>
+
+<div class="photo">Photo 6</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+     EXERCISE 4
+     GRID TEMPLATE AREAS
+===================================== -->
+
+<section>
+
+<h2>Exercise 4 - Grid Template Areas</h2>
+
+<div class="layout">
+
+<header>
+Header
+</header>
+
+<aside>
+Sidebar
+</aside>
+
+<main>
+Main Content
+</main>
+
+<footer>
+Footer
+</footer>
+
+</div>
+
+</section>
+
+<!-- =====================================
+     EXERCISE 5
+     PRODUCT CARD
+===================================== -->
+
+<section>
+
+<h2>Exercise 5 - Product Card Badge</h2>
+
+<div class="product-card">
+
+<div class="badge">
+ETB Sale
+</div>
+
+<h3>Wireless Headphones</h3>
+
+<p>Price: 1,500 ETB</p>
+
+<p>High-quality wireless headphones with clear sound and long battery life.</p>
+
+</div>
+
+</section>
+
+</body>
+</html>

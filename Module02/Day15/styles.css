@@ -1,0 +1,268 @@
+/* =====================================
+   GOOGLE FONT
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =====================================
+   ROOT VARIABLES
+===================================== */
+
+:root{
+
+    --primary:#1F7A5C;
+    --secondary:#D4A017;
+    --dark:#222;
+    --light:#ffffff;
+    --gray:#f4f4f4;
+
+    --space-sm:10px;
+    --space-md:20px;
+    --space-lg:40px;
+    --space-xl:80px;
+
+    --radius:10px;
+
+}
+
+/* =====================================
+   RESET
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =====================================
+   BODY
+===================================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--light);
+
+    color:var(--dark);
+
+    line-height:1.7;
+
+}
+
+/* =====================================
+   IMAGES
+===================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* =====================================
+   LINKS
+===================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* =====================================
+   LIST
+===================================== */
+
+ul{
+
+    list-style:none;
+
+}
+/* =====================================
+   HEADER
+===================================== */
+
+header{
+
+    background:var(--light);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+nav{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+.logo{
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+
+    min-height:90vh;
+
+    background:linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url("images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+.hero-content{
+
+    max-width:700px;
+
+}
+
+.hero h1{
+
+    font-size:clamp(2rem,5vw,4rem);
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:1.1rem;
+
+    margin-bottom:30px;
+
+}
+/* =====================================
+   BUTTON
+===================================== */
+
+.btn,
+button{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:1rem;
+
+}
+
+.btn:hover,
+button:hover{
+
+    background:#166347;
+
+}
+/* =====================================
+   SECTIONS
+===================================== */
+
+section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 0;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    color:var(--primary);
+
+    margin-bottom:40px;
+
+    font-size:2rem;
+
+}

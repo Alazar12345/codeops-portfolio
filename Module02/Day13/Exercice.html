@@ -1,0 +1,190 @@
+Exercise 1
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exercise 1</title>
+
+<style>
+
+:root{
+    --primary:#0B7A75;
+    --secondary:#F4A261;
+    --spacing:16px;
+    --font:Arial, Helvetica, sans-serif;
+}
+
+body{
+    font-family:var(--font);
+    padding:40px;
+}
+
+button{
+    background:var(--primary);
+    color:white;
+    padding:var(--spacing);
+    border:none;
+    border-radius:8px;
+    font-family:var(--font);
+}
+
+button:hover{
+    background:var(--secondary);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<button>Click Me</button>
+
+</body>
+</html>
+Exercise 2
+Content-box
+<style>
+.card{
+    width:300px;
+    padding:24px;
+    border:2px solid black;
+    box-sizing:content-box;
+}
+/*
+Rendered width:
+
+300px
++ 24px left padding
++ 24px right padding
++ 2px left border
++ 2px right border
+
+= 352px*/
+Border-box
+.card{
+    width:300px;
+    padding:24px;
+    border:2px solid black;
+    box-sizing:border-box;
+}
+/*
+Rendered width:
+
+300px
+Exercise 3
+
+Given:
+*/
+p{
+    color:blue;
+}
+
+.text{
+    color:green;
+}
+
+#intro{
+    color:red;
+}
+</style>
+<p id="intro" class="text">
+Hello World
+</p>
+<p>Which color wins?
+Red
+Specificity
+Selector	Specificity
+p	0-0-1
+.text	0-1-0
+#intro	1-0-0
+
+The ID selector (#intro) wins because it has the highest specificity.
+
+Exercise 4</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Airline Schedule</title>
+
+<style>
+
+table{
+    border-collapse:collapse;
+    width:100%;
+}
+
+th{
+    background:#0B7A75;
+    color:white;
+}
+
+th,
+td{
+    padding:12px;
+    border:1px solid #ccc;
+}
+
+tr:nth-child(even){
+    background:#f2f2f2;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<table>
+
+<tr>
+<th>Flight</th>
+<th>Destination</th>
+<th>Time</th>
+</tr>
+
+<tr>
+<td>ET101</td>
+<td>Addis Ababa</td>
+<td>08:00</td>
+</tr>
+
+<tr>
+<td>ET202</td>
+<td>Nairobi</td>
+<td>10:30</td>
+</tr>
+
+<tr>
+<td>ET303</td>
+<td>Dubai</td>
+<td>13:15</td>
+</tr>
+
+<tr>
+<td>ET404</td>
+<td>London</td>
+<td>18:20</td>
+</tr>
+
+<tr>
+<td>ET505</td>
+<td>Johannesburg</td>
+<td>21:40</td>
+</tr>
+
+</table>
+<p>
+Exercise 5
+Color Conversions
+Hex	RGB	HSL	Lighter Hover HSL
+#0B7A75	rgb(11,122,117)	hsl(177,84%,26%)	hsl(177,84%,40%)
+#F4A261	rgb(244,162,97)	hsl(27,87%,67%)	hsl(27,87%,78%)
+#264653	rgb(38,70,83)	hsl(197,37%,24%)	hsl(197,37%,38%)
+
+Only the lightness value changes for the hover versions.
+</p>
+</body>
+</html>

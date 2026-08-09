@@ -1,0 +1,45 @@
+# Habesha Eatery Mini-Site
+
+## Project Overview
+
+This project is a two-page accessible website for a fictional restaurant called **Habesha Eatery** located in **Bole, Addis Ababa**. It was created as part of the IBT College Canada CodeOps Module 2 assignment.
+
+## Pages
+
+- **index.html** – Reservation page with:
+  - Reservation form
+  - ETB menu table
+  - Restaurant media section
+
+- **contact.html** – Contact page with:
+  - Contact form
+  - Opening hours table
+
+## How to Open the Site
+
+1. Clone or download this repository.
+2. Open the project folder.
+3. Double-click **index.html** or open it in any modern web browser.
+4. Use the navigation links to move between the Reservation and Contact pages.
+
+## Accessibility Features
+
+- Semantic HTML5 elements (`header`, `nav`, `main`, `section`, `footer`)
+- One `<h1>` on each page
+- Properly associated form labels using `for` and `id`
+- Required form fields
+- Email validation using `type="email"`
+- Keyboard-accessible navigation links
+- Accessible data tables using `<thead>`, `<tbody>`, and `<caption>`
+- Images include descriptive `alt` text
+- Responsive viewport meta tag
+- Logical heading structure for screen readers
+
+## Technologies Used
+
+- HTML5
+- CSS3
+
+## Author
+
+**Alazar Birhanu**

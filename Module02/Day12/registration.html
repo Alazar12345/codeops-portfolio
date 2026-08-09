@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethio Telecom Registration</title>
+    <meta
+      name="description"
+      content="Registration form for a fictional Ethio Telecom service."
+    />
+  </head>
+  <body>
+    <h1>Ethio Telecom Registration</h1>
+
+    <!-- GET is used because this is a simple demo form and does not submit sensitive data. -->
+    <form action="#" method="get">
+      <label for="name">Full Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="tel">Telephone:</label><br />
+      <input
+        type="tel"
+        id="tel"
+        name="tel"
+        pattern="\+2519[0-9]{8}"
+        placeholder="+251912345678"
+        required
+      /><br /><br />
+
+      <label for="branch">Branch:</label><br />
+      <select id="branch" name="branch">
+        <option>Bole</option>
+        <option>Kazanchis</option>
+        <option>Piassa</option></select
+      ><br /><br />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <table border="1">
+      <caption>
+        Ethiopian Airlines Flight Schedule
+      </caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Flight</th>
+          <th scope="col">From</th>
+          <th scope="col">To</th>
+          <th scope="col">Departs</th>
+          <th scope="col">Price (ETB)</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>ET101</td>
+          <td>Addis Ababa</td>
+          <td>Bahir Dar</td>
+          <td>08:00</td>
+          <td>4,500</td>
+        </tr>
+        <tr>
+          <td>ET202</td>
+          <td>Addis Ababa</td>
+          <td>Hawassa</td>
+          <td>10:30</td>
+          <td>3,800</td>
+        </tr>
+        <tr>
+          <td>ET303</td>
+          <td>Addis Ababa</td>
+          <td>Mekelle</td>
+          <td>13:15</td>
+          <td>5,200</td>
+        </tr>
+        <tr>
+          <td>ET404</td>
+          <td>Addis Ababa</td>
+          <td>Dire Dawa</td>
+          <td>16:45</td>
+          <td>4,700</td>
+        </tr>
+        <tr>
+          <td>ET505</td>
+          <td>Addis Ababa</td>
+          <td>Jimma</td>
+          <td>19:20</td>
+          <td>4,100</td>
+        </tr>
+      </tbody>
+    </table>
+    <figure>
+      <img src="lalibela.jpg" alt="Rock-hewn churches of Lalibela" />
+      <figcaption>Rock-hewn churches of Lalibela, Ethiopia.</figcaption>
+    </figure>
+
+    <iframe
+      src="https://www.google.com/maps?q=Lalibela,Ethiopia&output=embed"
+      title="Map showing Lalibela, Ethiopia"
+      width="600"
+      height="450"
+    >
+    </iframe>
+    <!-- Replaced div with a real button for keyboard accessibility -->
+    <button type="button">Submit</button>
+
+    <!-- Added a label so screen readers know what the input is for -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" />
+
+    <!-- Added alt text so screen readers can describe the image -->
+    <img src="coffee.jpg" alt="Traditional Ethiopian coffee ceremony" />
+  </body>
+</html>

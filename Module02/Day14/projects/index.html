@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethio Telecom Dashboard - Layout Practice</title>
+
+<style>
+
+/* ==========================================
+   GLOBAL STYLES
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+}
+
+/* ==========================================
+   GRID PAGE LAYOUT
+========================================== */
+
+.app{
+
+    display:grid;
+
+    grid-template-columns:250px 1fr;
+
+    grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+
+    min-height:100vh;
+}
+
+/* ==========================================
+   HEADER (Sticky)
+========================================== */
+
+header{
+
+    grid-area:header;
+
+    background:#009688;
+
+    color:white;
+
+    padding:18px 30px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+}
+
+/* Flexbox Navbar */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:bold;
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:20px;
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+.profile{
+
+    background:white;
+
+    color:#009688;
+
+    padding:8px 14px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+aside{
+
+    grid-area:sidebar;
+
+    background:#ffffff;
+
+    border-right:1px solid #ddd;
+
+    padding:25px;
+}
+
+aside h2{
+
+    margin-bottom:20px;
+}
+
+aside ul{
+
+    list-style:none;
+}
+
+aside li{
+
+    padding:12px 0;
+
+    border-bottom:1px solid #eee;
+}
+
+aside a{
+
+    text-decoration:none;
+
+    color:#333;
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+main{
+
+    grid-area:main;
+
+    padding:25px;
+}
+
+/* Toolbar (Flexbox) */
+
+.toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+}
+
+.toolbar button{
+
+    padding:10px 18px;
+
+    background:#009688;
+
+    color:white;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+}
+
+/* ==========================================
+   STAT CARDS (Flexbox)
+========================================== */
+
+.stats{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+}
+
+.stat{
+
+    flex:1;
+
+    min-width:180px;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+
+    position:relative;
+}
+
+/* Absolute Positioned Badge */
+
+.badge{
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    background:red;
+
+    color:white;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:12px;
+}
+
+/* ==========================================
+   RESPONSIVE CARD GRID
+========================================== */
+
+.cards{
+
+    display:grid;
+
+    gap:20px;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+.card{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+    min-height:150px;
+}
+
+.card h3{
+
+    margin-bottom:10px;
+
+    color:#009688;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    grid-area:footer;
+
+    background:#009688;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width:700px){
+
+.app{
+
+    grid-template-columns:1fr;
+
+    grid-template-areas:
+
+    "header"
+
+    "sidebar"
+
+    "main"
+
+    "footer";
+}
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.stats{
+
+    flex-direction:column;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+Ethio Telecom
+</div>
+
+<div class="nav-links">
+
+<a href="#">Dashboard</a>
+
+<a href="#">Packages</a>
+
+<a href="#">Payments</a>
+
+<a href="#">Support</a>
+
+</div>
+
+<div class="profile">
+My Account
+</div>
+
+</div>
+
+</header>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside>
+
+<h2>Menu</h2>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">My Balance</a></li>
+
+<li><a href="#">Internet</a></li>
+
+<li><a href="#">Voice</a></li>
+
+<li><a href="#">SMS</a></li>
+
+<li><a href="#">Recharge</a></li>
+
+<li><a href="#">Settings</a></li>
+
+</ul>
+
+</aside>
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+<!-- Toolbar -->
+
+<div class="toolbar">
+
+<h2>Account Overview</h2>
+
+<button>Recharge Now</button>
+
+</div>
+
+<!-- Flexbox Stat Cards -->
+
+<div class="stats">
+
+<div class="stat">
+
+<span class="badge">NEW</span>
+
+<h3>Balance</h3>
+
+<p>ETB 560.00</p>
+
+</div>
+
+<div class="stat">
+
+<h3>Mobile Data</h3>
+
+<p>15 GB Remaining</p>
+
+</div>
+
+<div class="stat">
+
+<h3>Voice Minutes</h3>
+
+<p>240 Minutes</p>
+
+</div>
+
+<div class="stat">
+
+<h3>SMS</h3>
+
+<p>90 Messages</p>
+
+</div>
+
+</div>
+
+<!-- Responsive Grid -->
+
+<h2 style="margin-bottom:20px;">Quick Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Buy Data</h3>
+<p>Purchase internet packages.</p>
+</div>
+
+<div class="card">
+<h3>Recharge</h3>
+<p>Top up your mobile balance.</p>
+</div>
+
+<div class="card">
+<h3>Pay Bills</h3>
+<p>Manage monthly payments.</p>
+</div>
+
+<div class="card">
+<h3>Special Offers</h3>
+<p>View promotional packages.</p>
+</div>
+
+<div class="card">
+<h3>Transfer Balance</h3>
+<p>Send balance to another user.</p>
+</div>
+
+<div class="card">
+<h3>Customer Care</h3>
+<p>Get support anytime.</p>
+</div>
+
+</div>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>© 2026 Ethio Telecom Dashboard | Layout Practice Project</p>
+
+</footer>
+
+</div>
+
+</body>
+</html>
