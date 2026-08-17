@@ -1,3 +1,4 @@
+/*
 // TODO: Hold items in an array (this is your single source of truth)
 let items = [];
 const form = document.getElementById("add-form");
@@ -93,8 +94,33 @@ render();
 // 5. Call render()
 
 // State (single source of truth)
+*/
+const list  =  document.querySelector("#list");
+const li = document.createElement("li")
+li.textContent = "shiro";
+li.classList.add("ite");
+li.dataset.id = "12"
 
+list.append(li);
+list.prepend(li);
 
+console.log(list);
+
+const cart =[
+  {name:"Teff", qty:2},
+  {name:"Berbere", qty:1},
+]
+function render(){
+  const list  =  document.querySelector("#list");
+  list.innerHTML = "";
+  cart.forEach(item =>{
+    const li = document.createElement("li");
+    li.textContent = `${item.name} * ${item.qty}`;
+    list.append(li);
+  });
+}
+render();
+ 
 
 
 
