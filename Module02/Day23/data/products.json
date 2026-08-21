@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Gold Whey Protein",
+    "category": "Protein",
+    "price": 4200,
+    "brand": "Optimum Nutrition",
+    "image": "images/whey.png"
+  },
+  {
+    "id": 2,
+    "name": "Creatine Monohydrate",
+    "category": "Strength",
+    "price": 1800,
+    "brand": "MyProtein",
+    "image": "images/creatine.png"
+  },
+  {
+    "id": 3,
+    "name": "Pre Workout X",
+    "category": "Energy",
+    "price": 2500,
+    "brand": "Cellucor",
+    "image": "images/preworkout.png"
+  },
+  {
+    "id": 4,
+    "name": "BCAA Recovery",
+    "category": "Recovery",
+    "price": 2200,
+    "brand": "Scivation",
+    "image": "images/bcaa.png"
+  },
+  {
+    "id": 5,
+    "name": "Mass Gainer Pro",
+    "category": "Weight Gain",
+    "price": 4700,
+    "brand": "Dymatize",
+    "image": "images/gainer.png"
+  },
+  {
+    "id": 6,
+    "name": "Casein Protein",
+    "category": "Protein",
+    "price": 3900,
+    "brand": "MuscleTech",
+    "image": "images/casein.png"
+  },
+  {
+    "id": 7,
+    "name": "Fish Oil Omega-3",
+    "category": "Health",
+    "price": 1400,
+    "brand": "NOW",
+    "image": "images/fishoil.png"
+  },
+  {
+    "id": 8,
+    "name": "Multivitamin Elite",
+    "category": "Vitamins",
+    "price": 1600,
+    "brand": "Universal",
+    "image": "images/vitamins.png"
+  },
+  {
+    "id": 9,
+    "name": "L-Glutamine",
+    "category": "Recovery",
+    "price": 2100,
+    "brand": "Applied Nutrition",
+    "image": "images/glutamine.png"
+  },
+  {
+    "id": 10,
+    "name": "Protein Bar Box",
+    "category": "Snacks",
+    "price": 1200,
+    "brand": "Grenade",
+    "image": "images/proteinbar.png"
+  },
+  {
+    "id": 11,
+    "name": "Hydration Electrolytes",
+    "category": "Hydration",
+    "price": 950,
+    "brand": "Nuun",
+    "image": "images/electrolytes.png"
+  },
+  {
+    "id": 12,
+    "name": "Nitric Oxide Booster",
+    "category": "Performance",
+    "price": 2800,
+    "brand": "BSN",
+    "image": "images/nitricoxide.png"
+  }
+]
