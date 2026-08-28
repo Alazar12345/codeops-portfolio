@@ -11,6 +11,6 @@ main{
 .cart{
   background-color: #5d2c2c;
   border-radius:10px;
-  display:grid;
+  display:flex;
   padding:20px;
 }

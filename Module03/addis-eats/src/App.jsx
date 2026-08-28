@@ -7,9 +7,9 @@ import firfir from "./assets/firfir.jpg"
 import {useState} from "react"
 
 const dishes = [
-  {id:1,name:"Shiro",price:120,image:shiro,qty:0,},
-  {id:2,name:"Tibs",price:358, image:tibs,qty:0,},
-  {id:3,name:"Firfr",price:100, image:firfir,qty:0,},
+  {id:1,name:"Shiro",price:120,image:shiro,},
+  {id:2,name:"Tibs",price:358, image:tibs,},
+  {id:3,name:"Firfr",price:100, image:firfir,},
 ];
 function App() {
   
@@ -20,7 +20,24 @@ function App() {
 
 
   function addToCart(dish){
-     setCart([...cart,dish]);
+ const existing = cart.find(item => item.id === dish.id);
+
+ if(existing){
+
+   setCart(
+    cart.map(item =>
+      item.id === dish.id
+      ? {...item, qty:item.qty + 1}
+      : item
+    )
+   );
+
+ }else{
+
+   setCart([...cart,{...dish, qty:1}]);
+
+ }
+
      setTotal(total + dish.price)
   
   }
@@ -57,9 +74,9 @@ function App() {
 
             cart.map((item) => (
                 <div key={item.id}>
-                    <p>{item.name}={item.price}*{item.qty}</p>
+                    <p>{item.name} - {item.qty} * {item.price}</p>
                     <p> ETB</p>
-                    <strong>total{total}</strong>
+                    <h3>Total: {total}ETB</h3>
                 </div>
           
             ))
