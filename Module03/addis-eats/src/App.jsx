@@ -1,93 +1,115 @@
-import "./App.css"
-import Header from "./Components/Header/Header"
-import Dish from "./Components/Dish/Dish"
-import shiro from "./assets/shiro.jpg"
-import tibs from "./assets/tibs.jpg"
-import firfir from "./assets/firfir.jpg"
-import {useState} from "react"
+import "./App.css";
+import Header from "./Components/Header/Header";
+import Menu from "./Components/Menu/Menu";
+import { useState } from "react";
 
-const dishes = [
-  {id:1,name:"Shiro",price:120,image:shiro,},
-  {id:2,name:"Tibs",price:358, image:tibs,},
-  {id:3,name:"Firfr",price:100, image:firfir,},
-];
 function App() {
-  
-  const [cart,setCart] = useState([]);
-  const [total,setTotal] = useState(0)
 
-  
+  const [cart, setCart] = useState([]);
 
 
-  function addToCart(dish){
- const existing = cart.find(item => item.id === dish.id);
+  function addToCart(dish) {
 
- if(existing){
+    const existing = cart.find(
+      (item) => item.id === dish.id
+    );
 
-   setCart(
-    cart.map(item =>
-      item.id === dish.id
-      ? {...item, qty:item.qty + 1}
-      : item
-    )
-   );
 
- }else{
+    if (existing) {
 
-   setCart([...cart,{...dish, qty:1}]);
+      setCart(
+        cart.map((item) =>
+          item.id === dish.id
+            ? {
+                ...item,
+                qty: item.qty + 1
+              }
+            : item
+        )
+      );
 
- }
+    } else {
 
-     setTotal(total + dish.price)
-  
+      setCart([
+        ...cart,
+        {
+          ...dish,
+          qty: 1
+        }
+      ]);
+
+    }
+
   }
-  
- console.log(total)
- 
+
+
+  const total = cart.reduce(
+    (sum, item) =>
+      sum + item.price * item.qty,
+    0
+  );
+
+
   return (
     <>
-      <Header/>
+      <Header />
+
+
       <main>
-        <h1>Cart Items:{cart.lenght}</h1>
-        
-        
-      {dishes.map((dish) => {
-        return (
-          <Dish
-          key={dish.id}
-          name={dish.name}
-          price={dish.price}
-          image={dish.image}
-          onAdd={() => addToCart(dish)}
-          />
-        );
-      })}
-      <section className="cart">
 
-        <h2>Shopping Cart</h2>
+        <Menu addToCart={addToCart} />
 
-        {cart.length === 0 ? (
 
-            <p>Your cart is empty.</p>
+        <section className="cart">
 
-        ) : (
+          <h1>
+            Cart Items: {cart.length}
+          </h1>
 
-            cart.map((item) => (
+
+          <h2>
+            Shopping Cart
+          </h2>
+
+
+          {
+            cart.length === 0 ? (
+
+              <p>
+                Your cart is empty.
+              </p>
+
+            ) : (
+
+              cart.map((item) => (
+
                 <div key={item.id}>
-                    <p>{item.name} - {item.qty} * {item.price}</p>
-                    <p> ETB</p>
-                    <h3>Total: {total}ETB</h3>
+
+                  <p>
+                    {item.name} - {item.qty} x {item.price} ETB
+                  </p>
+
                 </div>
-          
-            ))
 
-        )}
+              ))
 
-    </section>
-      
+            )
+          }
+
+
+          <h3>
+            Total: {total} ETB
+          </h3>
+
+
+        </section>
+
+
       </main>
+
     </>
   );
 }
 
-export default App
+
+export default App;

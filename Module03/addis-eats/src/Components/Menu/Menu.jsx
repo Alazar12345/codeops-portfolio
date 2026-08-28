@@ -1,65 +1,95 @@
-import {useState} from "react";
-import dishes from "../../data";
+import { useState } from "react";
 import Dish from "../Dish/Dish";
+import dishes from "../../data";
+import "./Menu.css";
 
 
-function Menu(){
+function Menu({ addToCart }) {
 
-const [category,setCategory] = useState("All");
-
-
-const filteredDishes =
-category === "All"
-?
-dishes
-:
-dishes.filter(
-dish=>dish.category === category
-);
+  const [category, setCategory] = useState("All");
 
 
-return(
-
-<section>
-
-<button onClick={()=>setCategory("All")}>
-All
-</button>
-
-
-<button onClick={()=>setCategory("Meat")}>
-Meat
-</button>
+  const categories = [
+    "All",
+    "Vegetarian",
+    "Meat",
+    "Breakfast"
+  ];
 
 
-<button onClick={()=>setCategory("Vegetarian")}>
-Vegetarian
-</button>
+  const filteredDishes =
+    category === "All"
+      ? dishes
+      : dishes.filter(
+          (dish) => dish.category === category
+        );
 
 
-{
-filteredDishes.length === 0 ?
-
-<p>No dishes found.</p>
-
-:
-
-filteredDishes.map(dish=>(
-
-<Dish
-key={dish.id}
-{...dish}
-/>
-
-))
-
-}
+  return (
+    <section className="menu">
 
 
-</section>
+      <h1>
+        Addis Eats Menu
+      </h1>
 
-)
 
+      <div className="filters">
+
+        {
+          categories.map((cat) => (
+
+            <button
+              key={cat}
+              onClick={() => setCategory(cat)}
+            >
+              {cat}
+            </button>
+
+          ))
+        }
+
+      </div>
+
+
+
+      {
+        filteredDishes.length === 0 ? (
+
+          <p>
+            No dishes found in this category.
+          </p>
+
+        ) : (
+
+
+          <div className="dish-list">
+
+            {
+              filteredDishes.map((dish) => (
+
+                <Dish
+                  key={dish.id}
+                  name={dish.name}
+                  price={dish.price}
+                  image={dish.image}
+                  spicy={dish.spicy}
+                  currency="ETB"
+                  onAdd={() => addToCart(dish)}
+                />
+
+              ))
+            }
+
+          </div>
+
+
+        )
+      }
+
+
+    </section>
+  );
 }
 
 
