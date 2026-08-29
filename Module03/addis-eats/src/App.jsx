@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Menu from "./Components/Menu/Menu";
 import { useState } from "react";
+import OrderForm from "./Components/OrderForm/OrderForm";
 
 function App() {
 
@@ -95,7 +96,7 @@ function App() {
 
             )
           }
-
+          <OrderForm />
 
           <h3>
             Total: {total} ETB

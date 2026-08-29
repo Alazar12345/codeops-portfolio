@@ -9,8 +9,9 @@ main{
     margin:auto;
 }
 .cart{
-  background-color: #5d2c2c;
+  background-color: #949494;
   border-radius:10px;
-  display:;
+  display:flex;
+  flex-direction:column;
   padding:20px;
 }

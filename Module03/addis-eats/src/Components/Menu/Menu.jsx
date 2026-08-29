@@ -2,6 +2,7 @@ import { useState } from "react";
 import Dish from "../Dish/Dish";
 import dishes from "../../data";
 import "./Menu.css";
+import CategoryBar from "../CategoryBar/CategoryBar";
 
 
 function Menu({ addToCart }) {
@@ -33,23 +34,12 @@ function Menu({ addToCart }) {
         Addis Eats Menu
       </h1>
 
-
-      <div className="filters">
-
-        {
-          categories.map((cat) => (
-
-            <button
-              key={cat}
-              onClick={() => setCategory(cat)}
-            >
-              {cat}
-            </button>
-
-          ))
-        }
-
-      </div>
+      <CategoryBar
+    categories={categories}
+    selected={category}
+    onSelect={setCategory}
+/>
+      
 
 
 
