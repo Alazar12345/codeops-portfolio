@@ -1,16 +1,131 @@
-# React + Vite
+# Addis Eats Capstone
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+Addis Eats is a React-based capstone project that demonstrates the planning and initial structure of a restaurant ordering application. The project focuses on application architecture, routing, and project organization before implementing full functionality.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application is designed to provide users with a simple and intuitive way to browse Ethiopian dishes, view dish details, manage a shopping cart, and complete an order.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Objectives
 
-## Expanding the Oxlint configuration
+- Plan the application before development.
+- Design the application routes and navigation.
+- Organize reusable components.
+- Define state ownership and placement.
+- Build a working React scaffold with all planned screens accessible.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+---
+
+## Features
+
+- Home page
+- Menu page
+- Dish details page
+- Shopping cart page
+- Login page
+- Checkout page
+- Client-side routing using React Router
+
+---
+
+## Project Structure
+
+```
+Addis-Eats-Capstone
+│
+├── docs
+│   ├── project-brief.md
+│   ├── route-map.md
+│   ├── component-tree.md
+│   └── state-placement.md
+│
+├── src
+│   ├── components
+│   ├── pages
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+└── README.md
+```
+
+---
+
+## Technologies Used
+
+- React
+- Vite
+- JavaScript
+- React Router DOM
+
+---
+
+## Getting Started
+
+### Clone the repository
+
+```bash
+git clone <repository-url>
+```
+
+### Navigate to the project
+
+```bash
+cd Addis-Eats-Capstone
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## Available Routes
+
+| Route | Description |
+|--------|-------------|
+| `/` | Home page |
+| `/menu` | Menu page |
+| `/dish/:id` | Dish details page |
+| `/cart` | Shopping cart |
+| `/login` | Login page |
+| `/checkout` | Checkout page |
+
+---
+
+## Documentation
+
+The `docs` folder contains the planning documents for the project:
+
+- Project Brief
+- Route Map
+- Component Tree
+- State Placement Table
+
+---
+
+## Project Status
+
+This repository represents the planning and scaffold phase of the Addis Eats application. It includes the project documentation and a working React application with all planned routes connected and accessible.
+
+Future development will include application state management, form validation, error handling, and additional restaurant ordering features.
+
+---
+
+## Author
+
+**Alazar Birhanu**
+
+Bachelor of Business Administration and Information Systems (BAIS)
+
+Addis Ababa University
