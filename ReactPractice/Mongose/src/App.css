@@ -1,0 +1,25 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.navbar button {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.cart-item{
+  padding: 15px;
+  margin-bottom:15px;
+  border-radius:10px;
+}
+button {
+  margin: 5px;
+}

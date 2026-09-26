@@ -1,0 +1,20 @@
+.category-bar {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.category-bar button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background: #f2f2f2;
+}
+
+.category-bar button.active {
+  background: #1F7A5C;
+  color: white;
+}
